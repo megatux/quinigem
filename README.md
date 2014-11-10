@@ -20,7 +20,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+q = Quinigem::Scrapper.new "pri", "07112014"
+q.winners
+```
 
 ## Contributing
 

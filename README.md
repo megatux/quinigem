@@ -1,3 +1,5 @@
+[![Build Status](https://api.travis-ci.org/megatux/quinigem.svg)](https://travis-ci.org/megatux/quinigem)
+
 # Quinigem
 
 Gem to scrap the Quiniela results from http://www.loteria-nacional.gov.ar

@@ -39,9 +39,13 @@ module Quinigem
       return [] unless response.code == "200"
 
       doc = Nokogiri::HTML response.body
-      one_to_ten_results    = doc.css( "#Columna1Quiniela > div strong").map {|v| v.text}
-      ten_to_twenty_results = doc.css( "#Columna2Quiniela > div strong").map {|v| v.text}
+      one_to_ten_results    = column_values doc, "#Columna1Quiniela > div strong"
+      ten_to_twenty_results = column_values doc, "#Columna2Quiniela > div strong"
       @winners = one_to_ten_results + ten_to_twenty_results
+    end
+
+    def column_values document, selector
+      document.css(selector).map {|v| v.text}.reject {|e| e.size == 0}
     end
   end
 end

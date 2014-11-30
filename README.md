@@ -11,7 +11,7 @@ Gem to scrap the Quiniela results from http://www.loteria-nacional.gov.ar
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'quinigem'
+gem 'quinigem', :git => 'https://github.com/megatux/quinigem.git'
 ```
 
 And then execute:
